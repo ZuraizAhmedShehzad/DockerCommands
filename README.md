@@ -24,40 +24,56 @@
     ```
 - **Pull Docker Image**
     ```bash
-    docker pull httpd (apache image - latest by default)
+    # apache image - latest by default
+    docker pull httpd 
     
-    docker pull httpd:latest (apache image - latest specified)
+    # apache image - latest specified
+    docker pull httpd:latest 
     
-    docker pull httpd:2.9 (apache image - 2.9v)
+    #apache image - 2.9v
+    docker pull httpd:2.9 
     ```
 - **Start Docker Container**
     ```bash
-    docker start container-id (check container id using ‘docker ps -a’)
+    # check container id using "docker ps -a"
+    docker start container-id 
     ```
 - **Stop Docker Container**
     ```bash
-    docker stop container-id (check container id using ‘docker ps -a’)
+    # check container id using "docker ps -a"
+    docker stop container-id 
     ```
 - **Run Docker Container**
     ```bash
-    - docker run redis (run container in terminal)
-    - docker run -d redis (-d detached is used to run container in background of terminal)
-    - docker run -d redis (-d detached is used to run container in background of terminal)
-    - docker run -d --name mywebapp redis (--name is used to specify a name for container)
-    - docker run -p7000:6379 -d redis (-p is port, 7000 is host port, 6379 is container port. Host port cant be same for multiple containers)
+    # run container in terminal
+    - docker run redis 
+    
+    # -d detached is used to run container in background of terminal
+    - docker run -d redis 
+    
+    # -d detached is used to run container in background of terminal
+    - docker run -d redis 
+    
+    # --name is used to specify a name for container
+    - docker run -d --name mywebapp redis 
+    
+    # -p is port, 7000 is host port, 6379 is container port. Host port cant be same for multiple containers
+    - docker run -p7000:6379 -d redis 
     ```
     - **docker run** is used to create a new container from an image, while **docker start** is used to start an existing container that has been stopped or paused.
 - **Remove Docker Image**
     ```bash
     docker rm image-name 
     
-    docker rm -f image-name (-f is used to forcefully delete image if its container is running)
+    # -f is used to forcefully delete image if its container is running
+    docker rm -f image-name 
     ```
 - **Remove Docker Container**
     ```bash
     docker rm container-id 
     
-    docker rm -f container-id (-f is used to forcefully delete image if its container is running)
+    # -f is used to forcefully delete image if its container is running
+    docker rm -f container-id 
     ```
 - **Check Docker Logs**
     ```bash
